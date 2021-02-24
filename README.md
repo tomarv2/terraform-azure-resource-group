@@ -13,8 +13,6 @@
         <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
 </p>
 
-<img alt="Stack Exchange reputation" src="https://img.shields.io/stackexchange/stackoverflow/r/6679867?style=plastic">
-
 # Azure Resource Group module
 
 ## Versions
