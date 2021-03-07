@@ -2,7 +2,7 @@
 # This is used by Terraform v0.9.0+ and is NOT compatible with older versions.
 # Do not edit or delete!
 
-terraform { 
-	backend "azurerm" {
-	} 
+terraform {
+  backend "azurerm" {
+  }
 }

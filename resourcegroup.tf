@@ -1,13 +1,13 @@
-locals{
+locals {
   rgname = var.rg_name != null ? var.rg_name : "${var.teamid}-${var.prjid}"
 }
 
 resource "azurerm_resource_group" "resourcegroup" {
-  count                              = var.add_resourcegroup ? 1 : 0
+  count = var.add_resourcegroup ? 1 : 0
 
-  name                               = local.rgname
-  location                           = var.rg_location
-  tags                               = merge(local.shared_tags)
+  name     = local.rgname
+  location = var.rg_location
+  tags     = merge(local.shared_tags)
 
   # Resource Group creation is eventually consistent, so add a delay.
   provisioner "local-exec" {
@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "resourcegroup" {
           finished=true
       done;
     EOT
-    }
+  }
 }
 
 

@@ -12,7 +12,7 @@ variable "prjid" {
 
 variable "rg_location" {
   description = "Resource Group region"
-  default = "eastus"
+  default     = "eastus"
 }
 
 variable "add_resourcegroup" {}
@@ -27,5 +27,5 @@ variable "tenant_id" {}
 
 variable "rg_name" {
   description = "Resource Group name"
-  default = null
+  default     = null
 }
