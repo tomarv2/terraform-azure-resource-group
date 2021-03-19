@@ -15,14 +15,15 @@
         <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
 </p>
 
-# Terraform module for Azure Resource Group
+# Terraform module to create Azure Resource Group
 
 ## Versions
 
 - Module tested for Terraform 0.14.
-- Azure provider version [2.48.0](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
+- Azure provider version [2.52.0](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
 - `main` branch: Provider versions not pinned to keep up with Terraform releases
-- `tags` releases: Tags are pinned with versions (use <img src="https://img.shields.io/github/v/tag/tomarv2/terraform-azure-resource-group" /></a> in your releases)
+- `tags` releases: Tags are pinned with versions (use <a href="https://github.com/tomarv2/terraform-azure-resource-group/tags" alt="GitHub tag">
+        <img src="https://img.shields.io/github/v/tag/tomarv2/terraform-azure-resource-group" /></a> in your releases)
 
 **NOTE:** 
 
@@ -49,7 +50,7 @@ export TF_AZURE_CONTAINER=tfstate # Output of remote_state.sh
 export ARM_ACCESS_KEY=xxxxxxxxxx # Output of remote_state.sh
 ```  
 
-- Update `examples/main.tf`
+- Updated `examples` directory to required values
 
 - Run and verify the output before deploying:
 ```
@@ -97,16 +98,32 @@ module "resourcegroup" {
 ```
 
 Please refer to examples directory [link](examples) for references.
+
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.14 |
+| azurerm | ~> 2.52 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| azurerm | ~> 2.52 |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| add\_resourcegroup | feature flag, true or false | `bool` | `true` | no |
 | client\_id | n/a | `any` | n/a | yes |
 | client\_secret | n/a | `any` | n/a | yes |
-| prjid | Name of the project/stack e.g: mystack, nifieks. Should not be changed after running 'tf apply'. | `any` | n/a | yes |
-| rg\_region | Resource Group region | `string` | `"eastus"` | no |
+| prjid | (Required) Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `any` | n/a | yes |
+| rg\_location | Resource Group region | `string` | `"eastus"` | no |
+| rg\_name | Resource Group name | `any` | `null` | no |
 | subscription\_id | n/a | `any` | n/a | yes |
-| teamid | Name of the team or group e.g. devops, dataengineering. Should not be changed after running 'tf apply'. | `any` | n/a | yes |
+| teamid | (Required) Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `any` | n/a | yes |
 | tenant\_id | n/a | `any` | n/a | yes |
 
 ## Outputs

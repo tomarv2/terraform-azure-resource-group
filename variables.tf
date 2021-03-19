@@ -11,7 +11,11 @@ variable "rg_location" {
   default     = "eastus"
 }
 
-variable "add_resourcegroup" {}
+variable "add_resourcegroup" {
+  description = "feature flag, true or false"
+  default     = true
+  type        = bool
+}
 
 variable "subscription_id" {}
 

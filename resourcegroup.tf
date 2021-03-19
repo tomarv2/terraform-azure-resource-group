@@ -1,6 +1,4 @@
-locals {
-  rgname = var.rg_name != null ? var.rg_name : "${var.teamid}-${var.prjid}"
-}
+
 
 resource "azurerm_resource_group" "resourcegroup" {
   count = var.add_resourcegroup ? 1 : 0

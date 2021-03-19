@@ -79,5 +79,5 @@ _testmain.go
 /test/run.out
 /test/times.out
 
-# ignore test files
+# ignore test file(s)
 **test*
