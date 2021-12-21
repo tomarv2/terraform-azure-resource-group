@@ -111,32 +111,42 @@ Please refer to examples directory [link](examples) for references.
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.14 |
-| azurerm | ~> 2.52 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 2.90 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | ~> 2.52 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 2.90 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_resource_group.resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| add\_resourcegroup | feature flag, true or false | `bool` | `true` | no |
-| client\_id | n/a | `any` | n/a | yes |
-| client\_secret | n/a | `any` | n/a | yes |
-| prjid | (Required) Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `any` | n/a | yes |
-| rg\_location | Resource Group region | `string` | `"eastus"` | no |
-| rg\_name | Resource Group name | `any` | `null` | no |
-| subscription\_id | n/a | `any` | n/a | yes |
-| teamid | (Required) Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `any` | n/a | yes |
-| tenant\_id | n/a | `any` | n/a | yes |
+| <a name="input_add_rg"></a> [add\_rg](#input\_add\_rg) | feature flag, true or false | `bool` | `true` | no |
+| <a name="input_client_id"></a> [client\_id](#input\_client\_id) | Azure client Id | `string` | n/a | yes |
+| <a name="input_client_secret"></a> [client\_secret](#input\_client\_secret) | Azure client secret | `string` | n/a | yes |
+| <a name="input_prjid"></a> [prjid](#input\_prjid) | (Required) Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
+| <a name="input_rg_location"></a> [rg\_location](#input\_rg\_location) | Resource Group region | `string` | `"eastus"` | no |
+| <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | Resource Group name | `string` | `null` | no |
+| <a name="input_subscription_id"></a> [subscription\_id](#input\_subscription\_id) | Azure subscription Id | `string` | n/a | yes |
+| <a name="input_teamid"></a> [teamid](#input\_teamid) | (Required) Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
+| <a name="input_tenant_id"></a> [tenant\_id](#input\_tenant\_id) | Azure tenant Id | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| resourcegroup\_id | resource group id. |
-| resourcegroup\_name | resource group name. |
+| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | resource group id. |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | resource group name. |
