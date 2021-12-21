@@ -62,34 +62,37 @@ export ARM_ACCESS_KEY=xxxxxxxxxx # Output of remote_state.sh
 
 - Run and verify the output before deploying:
 ```
-tf -cloud azure plan -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
+tf -c=azure plan -var='teamid=foo' -var='prjid=bar'
 ```
 
 - Run below to deploy:
 ```
-tf -cloud azure apply -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
+tf -c=azure apply -var='teamid=foo' -var='prjid=bar'
 ```
 
 - Run below to destroy:
 ```
-tf -cloud azure destroy -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
+tf -c=azure destroy -var='teamid=foo' -var='prjid=bar'
 ```
+**NOTE:**
 
-> ❗️ **Important** - Two variables are required for using `tf` package:
->
-> - teamid
-> - prjid
->
-> These variables are required to set backend path in the remote storage.
-> Variables can be defined using:
->
-> - As `inline variables` e.g.: `-var='teamid=demo-team' -var='prjid=demo-project'`
-> - Inside `.tfvars` file e.g.: `-var-file=<tfvars file location> `
->
-> For more information refer to [Terraform documentation](https://www.terraform.io/docs/language/values/variables.html)
+- Read more on [tfremote](https://github.com/tomarv2/tfremote)
+
+### [Authenticate with Azure](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+
+Terraform supports a number of different methods for authenticating to Azure:
+
+- Authenticating to Azure using the Azure CLI
+- Authenticating to Azure using Managed Service Identity
+- Authenticating to Azure using a Service Principal and a Client Certificate
+- Authenticating to Azure using a Service Principal and a Client Secret
+
+---
+
+### Create Resource Group
 
 ```
-module "resourcegroup" {
+module "resource_group" {
   source = "../"
 
   client_id       = var.client_id
@@ -97,7 +100,7 @@ module "resourcegroup" {
   subscription_id = var.subscription_id
   tenant_id       = var.tenant_id
 
-  rg_name           = "demo-rg"
+  rg_name         = "demo-rg"
   # ---------------------------------------------
   # Note: Do not change teamid and prjid once set.
   teamid = var.teamid
