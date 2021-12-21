@@ -140,11 +140,11 @@ No modules.
 | <a name="input_add_rg"></a> [add\_rg](#input\_add\_rg) | feature flag, true or false | `bool` | `true` | no |
 | <a name="input_client_id"></a> [client\_id](#input\_client\_id) | Azure client Id | `string` | n/a | yes |
 | <a name="input_client_secret"></a> [client\_secret](#input\_client\_secret) | Azure client secret | `string` | n/a | yes |
-| <a name="input_prjid"></a> [prjid](#input\_prjid) | (Required) Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
+| <a name="input_prjid"></a> [prjid](#input\_prjid) | Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
 | <a name="input_rg_location"></a> [rg\_location](#input\_rg\_location) | Resource Group region | `string` | `"eastus"` | no |
 | <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | Resource Group name | `string` | `null` | no |
 | <a name="input_subscription_id"></a> [subscription\_id](#input\_subscription\_id) | Azure subscription Id | `string` | n/a | yes |
-| <a name="input_teamid"></a> [teamid](#input\_teamid) | (Required) Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
+| <a name="input_teamid"></a> [teamid](#input\_teamid) | Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
 | <a name="input_tenant_id"></a> [tenant\_id](#input\_tenant\_id) | Azure tenant Id | `string` | n/a | yes |
 
 ## Outputs
