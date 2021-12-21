@@ -1,7 +1,7 @@
 
 
-resource "azurerm_resource_group" "resourcegroup" {
-  count = var.add_resourcegroup ? 1 : 0
+resource "azurerm_resource_group" "resource_group" {
+  count = var.add_rg ? 1 : 0
 
   name     = local.rgname
   location = var.rg_location

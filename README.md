@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://github.com/tomarv2/terraform-azure-resource-group/actions/workflows/security_scans.yml" alt="Security Scans">
-        <img src="https://github.com/tomarv2/terraform-azure-resource-group/actions/workflows/security_scans.yml/badge.svg?branch=main" /></a>
+    <a href="https://github.com/tomarv2/terraform-azure-resource-group/actions/workflows/pre-commit.yml" alt="Pre Commit">
+        <img src="https://github.com/tomarv2/terraform-azure-resource-group/actions/workflows/pre-commit.yml/badge.svg?branch=main" /></a>
     <a href="https://www.apache.org/licenses/LICENSE-2.0" alt="license">
         <img src="https://img.shields.io/github/license/tomarv2/terraform-azure-resource-group" /></a>
     <a href="https://github.com/tomarv2/terraform-azure-resource-group/tags" alt="GitHub tag">
@@ -19,28 +19,36 @@
 
 ## Versions
 
-- Module tested for Terraform 0.14.
-- Azure provider version [2.52.0](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
+- Module tested for Terraform 1.0.1.
+- Azure provider version [2.90.0](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
 - `main` branch: Provider versions not pinned to keep up with Terraform releases
 - `tags` releases: Tags are pinned with versions (use <a href="https://github.com/tomarv2/terraform-azure-resource-group/tags" alt="GitHub tag">
         <img src="https://img.shields.io/github/v/tag/tomarv2/terraform-azure-resource-group" /></a> in your releases)
 
-**NOTE:** 
-
-- Read more on [tfremote](https://github.com/tomarv2/tfremote)
-
 ## Usage
 
-Recommended method:
+### Option 1:
 
-- Create python 3.6+ virtual environment 
+```
+terrafrom init
+terraform plan -var='teamid=tryme' -var='prjid=project1'
+terraform apply -var='teamid=tryme' -var='prjid=project1'
+terraform destroy -var='teamid=tryme' -var='prjid=project1'
+```
+**Note:** With this option please take care of remote state storage
+
+### Option 2:
+
+#### Recommended method (stores remote state in storage using `prjid` and `teamid` to create directory structure):
+
+- Create python 3.8+ virtual environment
 ```
 python3 -m venv <venv name>
 ```
 
 - Install package:
 ```
-pip install tfremote
+pip install tfremote --upgrade
 ```
 
 - Set below environment variables:
@@ -48,7 +56,7 @@ pip install tfremote
 export TF_AZURE_STORAGE_ACCOUNT=tfstatexxxxx # Output of remote_state.sh
 export TF_AZURE_CONTAINER=tfstate # Output of remote_state.sh
 export ARM_ACCESS_KEY=xxxxxxxxxx # Output of remote_state.sh
-```  
+```
 
 - Updated `examples` directory to required values
 

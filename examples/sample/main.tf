@@ -1,7 +1,7 @@
-module "resourcegroup" {
-  source = "../"
+module "resource_group" {
+  source = "../../"
 
-  rg_name = "demo-rg"
+  #rg_name = "demo-rg" # (optional)
 
   client_id       = var.client_id
   client_secret   = var.client_secret

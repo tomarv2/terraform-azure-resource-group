@@ -27,21 +27,3 @@ variable "tenant_id" {
   description = "Azure tenant Id"
   type        = string
 }
-
-variable "rg_location" {
-  description = "Resource Group region"
-  default     = "eastus"
-  type        = string
-}
-
-variable "add_rg" {
-  description = "feature flag, true or false"
-  default     = true
-  type        = bool
-}
-
-variable "rg_name" {
-  description = "Resource Group name"
-  default     = null
-  type        = string
-}

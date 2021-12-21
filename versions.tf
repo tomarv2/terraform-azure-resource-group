@@ -1,9 +1,9 @@
 # Note: versioning is optional but strongly recommended to pin the version of the Provider
 terraform {
-  required_version = ">= 0.14"
+  required_version = ">= 1.0.1"
   required_providers {
     azurerm = {
-      version = "~> 2.52"
+      version = ">= 2.90"
     }
   }
 }
