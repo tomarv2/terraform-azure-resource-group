@@ -27,3 +27,9 @@ variable "tenant_id" {
   description = "Azure tenant Id"
   type        = string
 }
+
+variable "deploy_resource_group" {
+  description = "feature flag to deploy this resource or not"
+  default = true
+    type        = bool
+}

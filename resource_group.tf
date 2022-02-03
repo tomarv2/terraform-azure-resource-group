@@ -1,10 +1,8 @@
-
-
 resource "azurerm_resource_group" "resource_group" {
-  count = var.add_rg ? 1 : 0
+  count = var.deploy_resource_group ? 1 : 0
 
   name     = local.rgname
-  location = var.rg_location
+  location = var.resource_group_location
   tags     = merge(local.shared_tags)
 
   # Resource Group creation is eventually consistent, so add a delay.

@@ -28,19 +28,19 @@ variable "tenant_id" {
   type        = string
 }
 
-variable "rg_location" {
+variable "resource_group_location" {
   description = "Resource Group region"
   default     = "eastus"
   type        = string
 }
 
-variable "add_rg" {
-  description = "feature flag, true or false"
+variable "deploy_resource_group" {
+  description = "feature flag to deploy this resource or not"
   default     = true
   type        = bool
 }
 
-variable "rg_name" {
+variable "resource_group_name" {
   description = "Resource Group name"
   default     = null
   type        = string

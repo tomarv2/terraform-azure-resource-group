@@ -1,4 +1,3 @@
-# Note: versioning is optional but strongly recommended to pin the version of the Provider
 terraform {
   required_version = ">= 1.0.1"
   required_providers {
@@ -8,8 +7,6 @@ terraform {
   }
 }
 
-# NOTE: Noticed an issue with getting access to Azure even after setting env.
-# variables, adding it to mitigate auth issues.
 provider "azurerm" {
   features {}
   subscription_id = var.subscription_id
