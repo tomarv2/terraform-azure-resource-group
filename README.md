@@ -94,13 +94,6 @@ Terraform supports a number of different methods for authenticating to Azure:
 ```
 module "resource_group" {
   source = "../"
-
-  client_id       = var.client_id
-  client_secret   = var.client_secret
-  subscription_id = var.subscription_id
-  tenant_id       = var.tenant_id
-
-  rg_name         = "demo-rg"
   # ---------------------------------------------
   # Note: Do not change teamid and prjid once set.
   teamid = var.teamid
@@ -137,19 +130,15 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_add_rg"></a> [add\_rg](#input\_add\_rg) | feature flag, true or false | `bool` | `true` | no |
-| <a name="input_client_id"></a> [client\_id](#input\_client\_id) | Azure client Id | `string` | n/a | yes |
-| <a name="input_client_secret"></a> [client\_secret](#input\_client\_secret) | Azure client secret | `string` | n/a | yes |
+| <a name="input_deploy_resource_group"></a> [deploy\_resource\_group](#input\_deploy\_resource\_group) | feature flag to deploy this resource or not | `bool` | `true` | no |
+| <a name="input_location"></a> [location](#input\_location) | The location/region where the virtual network is created. Changing this forces a new resource to be created. | `string` | `"westus2"` | no |
 | <a name="input_prjid"></a> [prjid](#input\_prjid) | Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
-| <a name="input_rg_location"></a> [rg\_location](#input\_rg\_location) | Resource Group region | `string` | `"eastus"` | no |
-| <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | Resource Group name | `string` | `null` | no |
-| <a name="input_subscription_id"></a> [subscription\_id](#input\_subscription\_id) | Azure subscription Id | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Resource Group name | `string` | `null` | no |
 | <a name="input_teamid"></a> [teamid](#input\_teamid) | Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
-| <a name="input_tenant_id"></a> [tenant\_id](#input\_tenant\_id) | Azure tenant Id | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | resource group id. |
-| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | resource group name. |
+| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | Resource Group id |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Resource Group name |

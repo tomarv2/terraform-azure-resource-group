@@ -7,5 +7,5 @@ locals {
     }
   )
 
-  rgname = var.rg_name != null ? var.rg_name : "${var.teamid}-${var.prjid}"
+  resource_group_name = var.resource_group_name != null ? var.resource_group_name : "${var.teamid}-${var.prjid}"
 }
