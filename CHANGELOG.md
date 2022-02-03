@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [v0.0.3](https://github.com/tomarv2/terraform-azure-resource-group/releases/tag/v0.0.3) - 2022-02-03 16:37:28
+
+*No description*
+
 ## [v0.0.2](https://github.com/tomarv2/terraform-azure-resource-group/releases/tag/v0.0.2) - 2021-12-21 16:16:33
 
 Upgrading provider versions
