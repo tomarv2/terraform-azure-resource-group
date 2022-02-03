@@ -8,29 +8,9 @@ variable "prjid" {
   type        = string
 }
 
-variable "subscription_id" {
-  description = "Azure subscription Id"
-  type        = string
-}
-
-variable "client_id" {
-  description = "Azure client Id"
-  type        = string
-}
-
-variable "client_secret" {
-  description = "Azure client secret"
-  type        = string
-}
-
-variable "tenant_id" {
-  description = "Azure tenant Id"
-  type        = string
-}
-
-variable "resource_group_location" {
-  description = "Resource Group region"
-  default     = "eastus"
+variable "location" {
+  description = " The location/region where the virtual network is created. Changing this forces a new resource to be created."
+  default     = "westus2"
   type        = string
 }
 
