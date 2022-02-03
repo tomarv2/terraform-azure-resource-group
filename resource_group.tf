@@ -1,7 +1,7 @@
 resource "azurerm_resource_group" "resource_group" {
   count = var.deploy_resource_group ? 1 : 0
 
-  name     = local.rgname
+  name     = local.resource_group_name
   location = var.resource_group_location
   tags     = merge(local.shared_tags)
 
@@ -13,7 +13,7 @@ resource "azurerm_resource_group" "resource_group" {
       echo "completing sleep";
       finished=false
       while ! $finished; do
-          az group exists -n ${local.rgname}
+          az group exists -n ${local.resource_group_name}
           finished=true
       done;
     EOT
