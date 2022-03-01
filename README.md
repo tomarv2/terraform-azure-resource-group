@@ -92,6 +92,7 @@ Terraform supports a number of different methods for authenticating to Azure:
 ```
 module "resource_group" {
   source = "../"
+
   # ---------------------------------------------
   # Note: Do not change teamid and prjid once set.
   teamid = var.teamid
