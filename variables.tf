@@ -21,7 +21,7 @@ variable "deploy_resource_group" {
 }
 
 variable "resource_group_name" {
-  description = "Resource Group name"
+  description = "The name of the Resource Group"
   default     = null
   type        = string
 }
