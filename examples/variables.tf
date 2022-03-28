@@ -9,3 +9,9 @@ variable "prjid" {
   type        = string
   default     = "resource_group"
 }
+
+variable "location" {
+  description = " The location/region where the resource is created. Changing this forces a new resource to be created"
+  default     = "westus2"
+  type        = string
+}

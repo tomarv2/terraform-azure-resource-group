@@ -4,6 +4,6 @@ output "resource_group_id" {
 }
 
 output "resource_group_name" {
-  description = "Resource Group name"
+  description = "Name of the resource group"
   value       = azurerm_resource_group.resource_group.*.name
 }

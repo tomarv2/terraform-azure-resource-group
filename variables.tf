@@ -9,7 +9,7 @@ variable "prjid" {
 }
 
 variable "location" {
-  description = " The location/region where the virtual network is created. Changing this forces a new resource to be created."
+  description = " The location/region where the resource is created. Changing this forces a new resource to be created"
   default     = "westus2"
   type        = string
 }
@@ -21,7 +21,7 @@ variable "deploy_resource_group" {
 }
 
 variable "resource_group_name" {
-  description = "The name of the Resource Group"
+  description = "Name of the resource group"
   default     = null
   type        = string
 }
