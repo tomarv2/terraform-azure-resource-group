@@ -5,6 +5,7 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
   tags     = merge(local.shared_tags)
 
+  /*
   # Resource Group creation is eventually consistent, so add a delay.
   provisioner "local-exec" {
     command = <<EOT
@@ -18,4 +19,5 @@ resource "azurerm_resource_group" "resource_group" {
       done;
     EOT
   }
+  */
 }
