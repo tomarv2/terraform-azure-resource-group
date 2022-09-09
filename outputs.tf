@@ -1,9 +1,9 @@
 output "resource_group_id" {
-  description = "Resource Group id"
-  value       = azurerm_resource_group.resource_group.*.id
+  description = "Id of the Resource group"
+  value       = [for rg in azurerm_resource_group.resource_group : rg.id]
 }
 
 output "resource_group_name" {
-  description = "Name of the resource group"
-  value       = azurerm_resource_group.resource_group.*.name
+  description = "Name of the Resource group"
+  value       = [for rg in azurerm_resource_group.resource_group : rg.name]
 }
