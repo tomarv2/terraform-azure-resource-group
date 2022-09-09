@@ -8,7 +8,27 @@ variable "prjid" {
   type        = string
 }
 
+<<<<<<< HEAD
 variable "resource_group_settings" {
   description = "Resource group information"
   type = list(map(string))
 }
+=======
+variable "location" {
+  description = " The location/region where the resource is created. Changing this forces a new resource to be created"
+  default     = "westus2"
+  type        = string
+}
+
+variable "deploy_resource_group" {
+  description = "feature flag to deploy this resource or not"
+  default     = true
+  type        = bool
+}
+
+variable "resource_group_name" {
+  description = "Name of the resource group"
+  default     = null
+  type        = string
+}
+>>>>>>> 246f8799937f128a6d2f704c90389ae598fcc16d
