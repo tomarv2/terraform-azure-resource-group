@@ -135,6 +135,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | Resource Group id |
-| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Name of the resource group |
+| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | Id of the Resource group |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Name of the Resource group |
 <!-- END_TF_DOCS -->
