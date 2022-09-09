@@ -1,9 +1,9 @@
 resource "azurerm_resource_group" "resource_group" {
-  count = var.deploy_resource_group ? 1 : 0
+  for_each = {for rg in var.resource_group_settings : rg.name => rg}
 
-  name     = local.resource_group_name
-  location = var.location
-  tags     = merge(local.shared_tags)
+    name = each.value.name
+    location = each.value.location
+    tags = merge(local.shared_tags)
 
   /*
   # Resource Group creation is eventually consistent, so add a delay.
