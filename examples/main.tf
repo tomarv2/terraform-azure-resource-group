@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.0.1"
   required_providers {
     azurerm = {
-      version = "~> 2.98"
+      version = "~> 3.21.1"
     }
   }
 }
@@ -10,11 +10,19 @@ terraform {
 provider "azurerm" {
   features {}
 }
-
 module "resource_group" {
   source = "../"
 
-  location = var.location
+  resource_group_settings = [
+    {
+      name = "demo1"
+      location = "westus2"
+    },
+    {
+      name = "demo2"
+      location = "westus2"
+    }
+  ]
   # ---------------------------------------------
   # Note: Do not change teamid and prjid once set.
   teamid = var.teamid
