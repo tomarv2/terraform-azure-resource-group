@@ -18,7 +18,7 @@
 ### Versions
 
 - Module tested for Terraform 1.0.1.
-- Azure provider version [2.98](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
+- Azure provider version [3.21.1](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
 - `main` branch: Provider versions not pinned to keep up with Terraform releases
 - `tags` releases: Tags are pinned with versions (use <a href="https://github.com/tomarv2/terraform-azure-resource-group/tags" alt="GitHub tag">
         <img src="https://img.shields.io/github/v/tag/tomarv2/terraform-azure-resource-group" /></a> in your releases)
@@ -112,16 +112,11 @@ Please refer to examples directory [link](examples) for references.
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.21.1 |
+No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.21.1 |
+No providers.
 
 ## Modules
 
@@ -129,22 +124,13 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [azurerm_resource_group.resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
+No resources.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_prjid"></a> [prjid](#input\_prjid) | Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
-| <a name="input_resource_group_settings"></a> [resource\_group\_settings](#input\_resource\_group\_settings) | Resource group information | `list(map(string))` | n/a | yes |
-| <a name="input_teamid"></a> [teamid](#input\_teamid) | Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
+No inputs.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | Id of the Resource group |
-| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Name of the Resource group |
+No outputs.
 <!-- END_TF_DOCS -->
