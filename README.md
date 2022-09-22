@@ -149,4 +149,3 @@ No modules.
 | <a name="output_resource_group"></a> [resource\_group](#output\_resource\_group) | Name of the Resource group |
 | <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | Id of the Resource group |
 <!-- END_TF_DOCS -->
-
