@@ -8,7 +8,14 @@ variable "prjid" {
   type        = string
 }
 
-variable "resource_group_settings" {
-  description = "Resource group information"
-  type = list(map(string))
+variable "resource_groups_config" {
+  description = "Resource group configuration"
+  type        = map(any)
+}
+
+
+variable "extra_tags" {
+  description = "Additional tags to associate"
+  type        = map(string)
+  default     = {}
 }
