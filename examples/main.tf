@@ -13,13 +13,9 @@ provider "azurerm" {
 module "resource_group" {
   source = "../"
 
-  resource_groups_config = {
-    "cloud-custodian" = {
+  config = {
+    "<resource_group_name>" = {
       location = "westus2"
     }
   }
-  # ---------------------------------------------
-  # Note: Do not change teamid and prjid once set.
-  teamid = var.teamid
-  prjid  = var.prjid
 }
